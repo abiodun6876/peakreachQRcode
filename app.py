@@ -1,7 +1,6 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, send_file
 import qrcode
 from io import BytesIO
-from flask import send_file
 
 app = Flask(__name__)
 
@@ -22,7 +21,7 @@ def home():
 
 @app.route("/qrcode")
 def generate_qr():
-    qr_url = "https://peakreach-q-rcode.vercel.app/"  # Update with your local IP
+    qr_url = "https://peakreach-q-rcode.vercel.app/"  # Deployed URL
     qr = qrcode.make(qr_url)
 
     # Convert QR code to image
@@ -32,5 +31,4 @@ def generate_qr():
 
     return send_file(img_io, mimetype='image/png')
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+# No need for app.run() when deploying to Vercel
