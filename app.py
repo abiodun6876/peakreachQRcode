@@ -22,7 +22,7 @@ def home():
 
 @app.route("/qrcode")
 def generate_qr():
-    qr_url = "peakreach-q-rcode.vercel.app/qrcode"  # Update with your local IP
+    qr_url = "https://peakreach-q-rcode.vercel.app/"  # Update with your local IP
     qr = qrcode.make(qr_url)
 
     # Convert QR code to image
