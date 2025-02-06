@@ -5,8 +5,8 @@ from io import BytesIO
 app = Flask(__name__)
 
 # Links to Play Store and App Store
-APP_STORE_URL = "https://apps.apple.com/ng/app/peakreach-agent/id6469105525"
-PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.peakreachagent.android"
+APP_STORE_URL = "https://apps.apple.com/ng/app/peakreach/id6469102132"
+PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.peakreach.android"
 
 @app.route("/")
 def home():
